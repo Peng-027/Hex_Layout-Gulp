@@ -1,0 +1,208 @@
+/*--------------
+  $breakpoint
+--------------*/
+@mixin xxl {
+  @media (max-width:1400px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width:1200px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width:992px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width:767px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width:576px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width:375px) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media (max-width:351px) {
+    @content;
+  }
+}
+
+/*--------------
+  $variables
+--------------*/
+$primary: #AA0601;
+$secondary: #FBF2F2;
+$text-primary: #650300;
+
+@mixin bgi {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin title($fz: 48px, $lh: 72px) {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: Bold;
+}
+
+@mixin title-2 {
+  border-left: 8px solid $primary;
+  padding-left: 16px;
+  margin: 96px 0 32px 0;
+  @include md{
+    margin: 80px 0 40px 0;
+  }
+  @include sm{
+    margin: 40px 0 24px 0;
+  }
+}
+
+@mixin subtitle($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin text($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin btn($py, $px, $bgc: $primary, $bgc_h:#000) {
+  padding: $py $px;
+  background-color: $bgc;
+  transition: all 0.2s ease-in;
+  &:hover{
+    background-color: $bgc_h;
+  }
+}
+
+@mixin img($bgc:#000){
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bgc;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+@mixin anime(){
+  content: "";
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+@mixin anime-hover {
+  width: 110%;
+  opacity: 1;
+  @include md{
+    opacity: 0;
+  }
+}
+
+/*--------------
+    $base
+--------------*/
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Emoji", "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+  
+  @include xl() {
+    padding: 0 36px;
+  }
+  @include lg() {
+    padding: 0 36px;
+  }
+  @include sm{
+    padding: 0 14px;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block{
+  display: block;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.mt-1{
+  margin-top: 8px;
+}
+
+.mb-3{
+  @include xl {
+    margin-bottom: 24px;
+  }
+}
+
+.mb-4{
+  margin-bottom: 32px;
+}
+
+.mb-6{
+  margin-bottom: 48px;
+}
+
+.mr-6{
+  margin-right: 48px;
+}
+
+.py-10{
+  padding: 80px 0;
+  @include md{
+    padding: 40px 0;
+  }
+}
+
+.mob-pt {
+  @include md{
+    padding-top: 80px;
+  }
+}

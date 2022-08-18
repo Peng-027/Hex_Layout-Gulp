@@ -1,0 +1,342 @@
+.slider-bg{
+  @include bgi;
+  height: 787px;
+  background-image: url('../images/home-header.png');
+
+  @include xl {
+    background-image: url('../images/home-header-sm.png');
+  }
+
+  @include md{
+    height: 396px;
+  }
+}
+
+.slider{
+  text-align: right;
+  color: $text-primary;
+  padding-top: 296px;
+  @include md{
+    padding-top: 114px;
+  }
+  
+  &-title{
+    @include subtitle(36px, 54px);
+    @include md{
+      @include subtitle(20px, 28px);
+    }
+    @include sm{
+      @include subtitle(16px, 24px);
+    }
+  }
+  &-subtitle {
+    @include title(64px, 96px);
+    @include md{
+      @include subtitle(32px, 48px);
+    }
+    @include sm{
+      @include subtitle(24px, 36px);
+    }
+  }
+  &-btn{
+    @include text(20px, 30px);
+    @include btn(6px, 12px);
+    color: #fff;
+  }
+
+}
+
+.business-bg{
+  background-color: $secondary;
+}
+
+.business{
+  text-align: center;
+  color: $text-primary;
+
+  &-title{
+    @include title();
+    @include md{
+      @include title(36px, 36px)
+    }
+    @include sm{
+      @include title(24px,36px);
+    }
+  }
+  &-list{
+    justify-content: space-between;
+    @include xxl{
+      flex-wrap: wrap;
+    }
+
+    li{
+      @include xxl{
+        width: 50%;
+      }
+      @include md{
+        width: 45%;
+      }
+      @include sm{
+        width: 100%;
+      }
+    }
+
+    img{
+      max-width: 100px;
+      margin: 24px 0 16px 0;
+    }
+    .list-title{
+      @include title(24px, 36px);
+    }
+    .list-info{
+      @include text(16px, 24px);
+      max-width: 306px;
+      color: #000;
+      text-align: justify;
+      margin-top: 8px;
+      @include xxl{
+        max-width: 336px;
+        margin: 8px auto 0 auto;
+      }
+    }
+  }
+}
+
+.classic{
+  text-align: center;
+
+  &-title{
+    @include title();
+    color: $text-primary;
+    @include md{
+      @include title(36px, 36px)
+    }
+    @include sm{
+      @include title(24px, 36px);
+    }
+  }
+  &-subtitle{
+    @include title();
+    color: $primary;
+    font-style: italic;
+    margin-top: 8px;
+    @include xxl {
+      margin-bottom: 24px;
+    }
+  }
+  ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include xxl{
+      flex-direction: column;
+    }
+  }
+  img{
+    max-width: 416px;
+    transition: all 0.1s ease-in;
+    &:hover{
+      border: 10px solid $primary;
+    }
+    @include xxl{
+      max-width: 336px;
+    }
+    @include md{
+      max-width: 348px;
+    }
+    @include xxs{
+      max-width: 100%;
+    }
+  }
+}
+
+.crossover-bg{
+  @include bgi;
+  height: 608px;
+  background-image: url('../images/index-bg.png');
+
+  @include xxl{
+    height: auto;
+  }
+  @include lg{
+    background-image: url("../images/index-bg-md.png");   
+  }
+  @include sm{
+    background-image: url("../images/index-bg-sm.png");
+  }
+}
+
+.crossover{
+  text-align: center;
+  
+  &-title{
+    @include title();
+    color: #fff;
+    @include md{
+      @include title(36px, 36px)
+    }
+    @include sm{
+      @include title(24px, 36px);
+    }
+  }
+  &-item{
+    @include xxl{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  li{
+    position: relative;
+  }
+  a{
+    &:before{
+      @include img();
+    }
+    &:hover:before{
+      opacity: 0.2;
+    }
+  }
+  &-subtitle{
+    @include title();
+    padding: 8px 0;
+    font-style: italic;
+    color: $primary;
+    background-color: #fff;
+  }
+  &-img{
+    @include bgi;
+    width: 648px;
+    height: 240px;
+    @include md{
+      width: 348px;
+    }
+  }
+  .double{
+    background-image: url("../images/home-section4-1.png");
+    @include md{
+      background-image: url("../images/home-section4-1-sm.png");
+    }
+  }
+  .youth{
+    background-image: url("../images/home-section4-2.png");
+    @include xl{
+      margin-top: 24px;
+    }
+    @include md {
+      background-image: url("../images/home-section4-2-sm.png");
+    }
+  }
+}
+
+.custom{
+
+  &-title{
+    @include title();
+    text-align: center;
+    color: $text-primary;
+    @include md{
+      @include title(36px, 36px)
+    }
+    @include sm{
+      @include title(24px, 36px);
+    }
+  }
+  &-list{
+    justify-content: space-between;
+    @include xxl{
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1070px;
+      margin: 0 auto;
+    }
+    @include md{
+      max-width: 348px;
+    }
+  }
+  &-card{
+    max-width: 306px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px #00000029;
+    @include xxl{
+      max-width: 336px;
+      margin: 0 12px;
+      &:nth-child(3), &:nth-child(4){
+        margin-top: 24px;
+      }
+    }
+    @include md{
+      max-width: 348px;
+      &:nth-child(2),&:nth-child(3),&:nth-child(4){
+        margin-top: 16px;
+      }
+    }
+  }
+  img{
+    @include xxl{
+      height: 306px;
+      width: 336px;
+    }
+  }
+  &-name{
+    padding: 16px 16px 8px 16px;
+    @include text(16px,24px);
+  }
+  &-info{
+    padding: 0 16px 72px 16px;
+    @include text(16px, 24px);
+    height: 72px;
+  }
+  &-date{
+    padding: 0 16px 16px 16px;
+    @include text(14px, 21px);
+    color:#707070;
+  }
+}
+
+.contact-bg{
+  background-color: #FBF2F2;
+}
+
+.contact{
+  max-width: 635px;
+
+  &-title{
+    @include title();
+    color: $text-primary;
+    text-align: center;
+    @include xl{
+
+    }
+  }
+  &-info{
+    @include text(20px, 30px);
+    margin-bottom: 24px;
+  }
+
+  .form{
+    @include text(16px, 24px);
+    flex-direction: column;
+
+    ul{
+      padding-bottom: 48px;
+    }
+    &-text{
+      margin: 8px 0 16px 0;
+      padding: 6px 0 6px 12px;
+    }
+    &-btn{
+      padding-top: 13px;
+      margin: 0 auto;
+      a{
+        @include btn(16px, 135px);
+        max-width: 416px;
+        color: #fff;
+        @include xs{
+          padding: 16px 80px;
+        }
+      }
+    }
+  }
+  
+
+}
+
