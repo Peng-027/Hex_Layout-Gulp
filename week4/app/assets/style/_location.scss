@@ -1,0 +1,159 @@
+/*--------------
+    $all
+--------------*/
+.location{
+  margin-bottom: 80px;
+  @include md{
+    margin-bottom: 64px;
+  }
+
+  &-title{
+    @include title();
+    @include title-2();
+  }
+
+  &-select{
+    margin: 32px 0 40px 0;
+    column-gap: 16px;
+    align-items: center;
+    label{
+      @include title(24px, 36px);
+      @include sm{
+        @include title(16px, 24px);
+      }
+    }
+    select{
+      display: block;
+      padding: 6px 0 6px 12px;
+      width: 25%;
+      @include xl{
+        width: 35%;
+      }
+      @include lg{
+        width: 45%;
+      }
+      @include xs{
+        width: 70%;
+      }
+    }
+    option{
+      @include text(18px, 26px);
+    }
+  }
+  
+  &-group{
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+  &-item{
+    max-width: 416px;
+    @include xl{
+      max-width: 337px;
+    }
+    @include sm{
+      max-width: 348px;
+    }
+    
+    h2{
+      @include subtitle(24px, 36px);
+      padding: 8px 0 8px 24px;
+      border-left: 1px solid #00000020;
+      border-right: 1px solid #00000020;
+    }
+  }
+  &-list{
+    padding: 16px 24px;
+    border: 1px solid #00000020;
+    li{
+      display: flex;
+      margin-bottom: 8px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    a{
+      @include text(20px, 30px);
+      color: #000;
+      padding-left: 8px;
+    }
+  }
+  &-btn{
+    @include text(19px, 27px);
+    text-align: center;
+    display: block;
+    color: #fff;
+    @include btn(16px, 0, #000, $primary);
+  }
+}
+
+/*--------------
+    $branch
+--------------*/ 
+.branch{
+  justify-content: space-between;
+  @include xl{
+    flex-direction: column;
+  }
+  @include md{
+    align-items: center;
+  }
+  
+  .location-item{
+    max-width: 526px;
+    flex-direction: column;
+    @include xl{
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      h2{
+        border-top: 1px solid #00000020;
+      }
+    }
+    @include md{
+      flex-direction: column;
+      align-items: center;
+      max-width: 348px;
+    }
+
+    img{
+      width: 526px;
+      max-height: 224px;
+      @include md{
+        max-width: 100%;
+      }
+    }
+  }
+  .location-card{
+    @include xl{
+      max-width: 337px;
+    }
+    @include md{
+      max-width: 348px;
+    }
+  }
+
+  &-map{
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 80px;
+    @include xl{
+      margin-top: 24px;
+    }
+    @include md{
+      margin-bottom: 64px;
+      max-width: 348px;
+    }
+    
+    iframe{
+      @include xxl{
+        width: 650px;
+      }
+      @include xl{
+        width: 100vw;
+      }
+    }
+
+  }
+}
