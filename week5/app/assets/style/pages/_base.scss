@@ -1,0 +1,86 @@
+/*--------------
+  $breakpoint
+--------------*/
+@mixin xxl {
+  @media (max-width:1400px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width:1200px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width:992px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width:767px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width:576px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width:375px) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media (max-width:351px) {
+    @content;
+  }
+}
+
+// ---------------------------
+@mixin title($fz: 1rem, $lh: 1.5rem) {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: bold;
+}
+
+@mixin text($fz: 0.75rem, $lh: 1rem) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin btn_hover($hc:$success) {
+  &:hover,&:active,&:focus{
+    background-color: transparent;
+    color: $hc;
+    box-shadow: none !important;
+    border: none;
+  }
+}
+
+/*--------------
+  $base
+--------------*/
+a{
+  text-decoration: none;
+  color: $gray-900;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    color: $success;
+  }
+}
+
+img{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+

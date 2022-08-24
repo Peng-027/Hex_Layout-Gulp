@@ -1,0 +1,71 @@
+.admin-add{
+  background-color: transparent;
+  color: $gray-900;
+  border: none;
+  @include btn_hover();
+}
+
+.admin{
+  padding: 0 20px;
+  color: $gray-900;
+  tbody{
+    th,td{
+      padding-top: 19px;
+      padding-bottom: 17px;
+    }
+  }
+  .modal-header{
+    border-bottom:none;
+  }
+  hr{
+    margin: 24.5px 0;
+  }
+  &-img{
+    img{
+      height: 141px;
+      width: 141px;
+      object-fit: cover;
+    }
+  }
+  &-title{
+    @include title(1.5rem, 2rem);
+  }
+  &-subtitle{
+    @include title(1.25rem ,2rem);
+    padding-bottom: 0.5rem;
+  }
+  &-mintitle{
+    @include text(14px, 1.5rem);
+  }
+  // modal
+  &-accordion{
+    &:not(.collapsed){
+      color: $gray-900;
+      background-color: transparent;
+      
+    }
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  &-checkbox{
+    &:checked{
+      background-color: $success;
+      border-color: $success;
+    }
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  &-icon{
+    a{
+      line-height: 1;
+    }
+  }
+  &-page{
+    .page-link{
+      color:$success;
+      border-color: $success;
+    }
+  }
+}

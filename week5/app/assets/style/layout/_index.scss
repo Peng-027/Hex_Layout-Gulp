@@ -1,0 +1,41 @@
+nav{
+  padding: 2rem 0;
+  background-color: $gray-100;
+  height: 100vh;
+
+  .logo{
+    padding-left: 2rem;
+  }
+}
+
+.nav{
+  padding: 2rem 0 0 2rem;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  height: 95%;
+  
+  &-item{
+    position: relative;
+    a{
+      @include title();
+    }
+    span{
+      padding-right: 1rem;
+    }
+  }
+  &-active{
+    a{
+      color: $success;
+    }
+    &:before{
+      content: "";
+      width: 4px;
+      height: 32px;
+      background-color: $success;
+      position: absolute;
+      left: -10%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
