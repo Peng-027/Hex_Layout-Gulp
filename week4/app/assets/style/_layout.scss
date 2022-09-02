@@ -1,0 +1,191 @@
+header{
+  background-color: $primary;
+  @include md{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+  }
+}
+.header{
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo{
+    max-width: 80px;
+    padding: 4px 0;
+    @include md{
+      padding: 16px 0;
+    }
+  }
+  &-menu{
+    display: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    @include md{
+      display: block;
+    }
+  }
+}
+.nav {
+  transition: all 0.3s ease-in;
+
+  @include md {
+    background-color: $primary;
+    width: 100%;
+    flex-wrap: wrap;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 250%;
+    transform: translate(-50%, 68%);
+    transition: all 0.6s ease-in;
+  }
+
+  &-item {
+    margin: 25px 0 25px 64px;
+
+    @include md {
+      width: 50%;
+      border: 1px solid #fff;
+      margin: 0;
+      text-align: center;
+    }
+
+    a {
+      position: relative;
+      color: #fff;
+      @include subtitle(20px, 30px);
+      &:before{
+        @include anime();
+      }
+      &:hover:before{
+        @include anime-hover();
+      }
+      @include md {
+        display: block;
+        padding: 16px 0;
+        @include subtitle(16px, 24px);
+      }
+    }
+  }
+}
+.mob-nav{
+  bottom: -45% !important;
+  opacity: 1 !important;
+}
+
+footer {
+  background-color: $primary;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+
+.footer {
+  
+  &-list {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 48px 0 32px 0;
+    @include md{
+      flex-direction: row-reverse;
+      align-items: start;
+      padding: 0 0 24px 0;
+    }
+  }
+  &-nav {
+    @include md {
+      display: none;
+    }
+  }
+  &-navItem {
+    position: relative;
+    margin-right: 48px;
+    @include text(16px, 24px);
+    a{
+      &:before {
+        @include anime();
+      }
+    
+      &:hover:before {
+        @include anime-hover();
+      }
+    }
+  }
+
+  .social {
+    @include md{
+      margin-top: 24px;
+    }
+    
+    img {
+      max-width: 48px;
+      margin-left: 32px;
+
+      @include lg {
+        max-width: 40px;
+        margin-left: 16px;
+      }
+      @include md{
+        max-width: 24px;
+        margin-left: 8px;
+      }
+    }
+
+    .social-fb {
+      @include lg {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-contact {
+    @include subtitle(36px, 54px);
+    margin-top: 24px;
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+    @include md{
+      @include subtitle(16px, 24px);
+    }
+
+    li {
+      align-items: center;
+    }
+
+    span {
+      font-size: 48px;
+      padding-right: 16px;
+      @include md{
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-gp {
+    @include subtitle(16px, 24px);
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    padding: 32px 0;
+    @include md{
+      flex-direction: column;
+      padding: 16px 0 24px 0;
+    }
+    ul{
+      @include md{
+        flex-direction: column;
+      }
+    }
+    li{
+      @include md{
+        margin-top: 8px;
+      }
+    }
+  }
+}

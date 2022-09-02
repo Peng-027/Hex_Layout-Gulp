@@ -1,0 +1,253 @@
+/*--------------
+    $all
+--------------*/
+.blog-header{
+  background-color: $text-primary;
+
+  &-group{
+    justify-content: space-between;
+    align-items: center;
+    @include sm{
+      justify-content: center;
+    }
+  }
+  ul{
+    column-gap: 48px;
+    @include sm{
+      column-gap: 24px;
+      justify-content: space-between;
+    }
+  }
+  a{
+    display: inline-block;
+    padding: 13px 0;
+    color: #fff;
+    @include title(20px, 30px);
+    @include md{
+      @include title(16px, 24px);
+    }
+  }
+  .blog-search{
+    span{
+      font-size: 40px;
+    }
+    @include sm{
+      display: none;
+    }
+  }
+}
+
+.blog{
+  margin-bottom: 100px;
+  @include xs{
+    max-width: 348px;
+  }
+
+  &-title{
+    @include title();
+    @include title-2();
+    @include sm{
+      @include title(24px, 36px)
+    }
+  }
+  &-item {
+    margin-bottom: 60px;
+    @include sm{
+      flex-wrap: wrap;
+
+    }
+    
+    img {
+      max-width: 636px;
+      margin-right: 24px;
+      object-fit: cover;
+      @include xl{
+        max-width: 50%;
+      }
+      @include sm{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-group{
+    flex-direction: column;
+  }
+  &-subtitle{
+    @include subtitle(32px, 48px);
+    color: $primary;
+  }
+  &-minititle{
+    @include subtitle(20px, 30px);
+    justify-content: space-between;
+    align-items: center;
+    @include md{
+      @include subtitle(16px, 24px);
+    }
+
+    span{
+      @include subtitle(16px, 24px);
+    }
+  }
+  p{
+    @include text(20px, 30px);
+    color: #555;
+    padding-top: 16px;
+    text-align: justify;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    @include lg{
+      @include text(16px, 24px);
+    }
+  }
+  &-btn{
+    @include title(36px, 54px);
+    color: $text-primary;
+    margin-left: auto;
+    margin-top: auto;
+    @include lg{
+      @include text(16px, 24px);
+      color: #555;
+    }
+  }
+}
+
+/*--------------
+    $inner
+--------------*/
+
+
+.blog-inner{
+  
+  .breadcrumb{
+    flex-wrap: wrap;
+    column-gap: 4px;
+    padding-top: 24px;
+    @include text(16px,24px);
+    
+    &-item{
+      &:last-child{
+        color: $primary;
+      }
+    }
+    a{
+      color: #000;
+    }
+  }
+
+}
+
+.blog-hastage{
+  padding: 8px 0;
+
+  a{
+    @include title(24px, 36px);
+    color: $primary;
+    margin-right: 15px;
+  }
+}
+
+.blog-main{
+  max-width: 856px;
+  @include xs{
+    max-width: 348px;
+    margin: 0 auto;
+  }
+  
+  h1{
+    @include subtitle(48px, 72px);
+    @include sm{
+      @include subtitle(34px, 36px);
+    }
+  }
+  h2{
+    padding-bottom: 16px;
+    @include subtitle(24px, 36px);
+    @include sm{
+      @include subtitle(16px, 24px);
+    }
+  }
+  p{
+    @include text(16px, 24px);
+    color: #555;
+    padding: 8px 0 40px 0;
+    @include sm{
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.blog-footer {
+
+  ul {
+    column-gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #707070;
+
+    a {
+      color: #000;
+      @include title(16px, 24px);
+    }
+
+    img {
+      max-width: 24px;
+    }
+  }
+
+  &-btn {
+    padding: 24px 0 80px 0;
+    justify-content: space-between;
+    a{
+      column-gap: 8px;
+      color: #000;
+      @include text(16px, 24px);
+    }
+  }
+}
+
+.blog-tag{
+  padding-left: 24px;
+    min-width: 317px;
+  @include lg{
+    min-width: 148px;
+  }
+  @include sm{
+    display: none;
+  }
+  
+  h4{
+    @include title(32px, 48px);
+    color: $primary;
+    padding-bottom: 8px;
+    span{
+      font-size: 48px;
+      padding-right: 8px;
+    }
+    @include lg {
+      @include title(16px, 24px);
+      span{
+        font-size: 24px;
+        padding-right: 0;
+      }
+    }
+  }
+  a{
+    @include title(24px, 36px);
+    color: $primary;
+    &:nth-child(even), &:nth-child(5){
+      padding-right: 24px;
+      @include lg{
+        padding-right: 16px;
+      }
+    }
+    @include lg{
+      @include title(16px, 24px);
+    }
+  }
+}
+
+
+

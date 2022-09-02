@@ -1,0 +1,483 @@
+.banner{
+  background: url("../images/bg_home.jpg") no-repeat center;
+  background-size: cover;
+  height: calc(100vh - 90px);
+  @include xxl{
+    height: 680px;
+  }
+  @include md{
+    background-image: url("../images/bg_home_mobile.jpg");
+    height: 500px;
+  }
+  @include sm{
+    height: 336px;
+  }
+
+  h2{
+    @include title(3rem, 70px);
+    @include md{
+      @include title(1.5rem, 35px);
+    }
+    &::after{
+      @include square(0, 0);
+    }
+    &::before{
+      @include square(0, 100%);
+    }
+    span{
+      @include text-gradient();
+    }
+  }
+  p{
+    @include text();
+    @include md{
+      @include text(14px, 20px);
+    }
+    &::after{
+      @include square(100%, 0);
+    }
+    &::before{
+      @include square(100%, 100%);
+    }
+  }
+}
+.title{
+  position: relative;
+  @include title();
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  @include md {
+    @include title(1.5rem, 35px);
+  }
+  
+  &::before{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: $primary;
+    bottom: -16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.introduce{
+
+  .title{
+    @media (min-width: 992px) {   
+      &::before{
+        left: 0;
+        transform: translate(0);
+      }
+    }
+  }
+  &-card{
+    transition: all .3s ease-in;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover{
+      background-color: $secondary;
+      border: 1px solid $primary;
+      color: #fff !important;
+      span{
+        @include text-gradient();
+      }
+    }
+    @include md{
+      background-color: $secondary;
+      color: #fff !important;
+      span{
+        @include text-gradient();
+      }
+    }
+  }
+  span{
+    @include text(50px, 50px);
+  }
+
+}
+
+.class{
+  
+  &-cardA{
+    &::after{
+      content: "01";
+    }
+  }
+  &-cardB{
+     &::after{
+      content: "02";
+    }
+  }
+  &-cardC{
+     &::after{
+      content: "03";
+    }
+  }
+  &-cardD{
+     &::after{
+      content: "04";
+    }
+  }
+  &-card{
+    position: relative;
+    border-radius: 12px;
+    &::after{
+      @include title(3rem, 3.5rem);
+      color: $primary;
+      background-color: $secondary;
+      padding: 0 8px;
+      position: absolute;
+      left: 40px;
+      top: 0;
+      transform: translateY(-50%);
+    }
+    h4{
+      @include title(1.5rem, 2.25rem);
+    }
+    p{
+      @include text();
+    }
+  }
+}
+
+.program{
+  p{
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .swiper-slide{
+    width: max-content !important;
+  }
+}
+
+.course{
+
+  &-card{
+    border-radius: 24px;
+    transition: all .3s ease-in;
+    outline: 2px solid transparent;
+    &:hover{
+    outline: 2px solid $primary;
+    }
+    p{
+      @include text(1rem, 1.5rem);
+      text-align: justify;
+    }
+    h4{
+      min-height: 48px;
+    }
+    h4, p{
+      overflow: hidden;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  &-price{
+    &::after{
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 70px;
+    }
+  }
+  &-btn{
+    color: #fff;
+    background-image: linear-gradient(to left, $primary, $info);
+    display: inline-block;
+    padding: 8px 32px;
+    @include text();
+    border-radius: 8px;
+    transition: all .2s ease-in;
+
+    &:hover{
+      color: #fff;
+      font-weight: bold;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.learn{
+
+  &-card{
+    cursor: pointer;
+    &:hover{
+      span{
+        color: $primary;
+      }
+      .title{
+        &:before{
+          background-color: $primary;
+          width: 70px;
+        }
+      }
+      p{
+        color: #fff;
+      }
+    }
+    &:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $secondary;
+      position: absolute;
+      opacity: 0.9;
+      transition: all .3s ease-in;
+      @include md{
+        opacity: 0.2;
+      }
+    }
+    &:hover:before{
+      opacity: 0.2;
+    }
+  }
+  img{
+    object-fit: cover;
+    height: 615px;
+    width: 100%;
+    @include xl{
+      height: 380px;
+    }
+  }
+  p{
+    @include text();
+    @include md{
+      color: #fff;
+    }
+  }
+  span{
+    @include md{
+      color: $primary;
+    }
+  }
+  .title{
+    &:before{
+      background-color: #fff;
+      transition: all .2s ease-in;
+      @media (min-width: 1200px) {
+        left: 0;
+        transform: translateY(0);
+      }
+      @include md{
+        background-color: $primary;
+        width: 70px;
+      }
+    }
+  }
+}
+
+.share{
+
+  &-card{
+    cursor: pointer;
+    &:hover {
+      .share-box{
+        opacity: 1;
+      }
+    }
+  }
+  h4{
+    @include title(18px, 26px);
+  }
+  p{
+    @include text(1rem, 1.5rem);
+  }
+  a{
+    @include text(18px, 21px);
+  }
+
+  &-box{
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    position: absolute;
+    transition: all .2s ease-in;
+    opacity: 0;
+    @include md{
+      display: none;
+    }
+  }
+  &-boxA{
+    top: 0;
+    left: 0;
+    border-top-left-radius: 12px;
+    border-top: 2px solid $primary;
+    border-left: 2px solid $primary;
+  }
+  &-boxB{
+    top: 0;
+    right: 0;
+    border-top-right-radius: 12px;
+    border-top: 2px solid $primary;
+    border-right: 2px solid $primary;
+  }
+  &-boxC{
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom: 2px solid $primary;
+    border-left: 2px solid $primary;
+  }
+  &-boxD{
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 12px;
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
+  }
+}
+
+.join{
+  background-image: url('../images/bg_share.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-box{
+    position: relative;
+    margin: 0 auto;
+    max-width: 925px;
+    padding-bottom: 3rem;
+    @include xl{
+      margin-left: 20px;
+    }
+    @include md{
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+  &-img{
+    max-width: 525px;
+    position: relative;
+    &::after{
+      content: "";
+      border: 1px solid #fff;
+      border-radius: 24px;
+      border-bottom-right-radius: 0px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 1rem;
+      left: -1rem;
+      z-index: -1;
+      @include md{
+        top: 0.5rem;
+        left: -0.5rem;
+        border-bottom-right-radius: 24px;
+      }
+    }
+    img{
+      border-radius: 24px;
+    }
+  }
+  &-message{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 416px;
+    border-radius: 24px;
+    border-bottom-left-radius: 0;
+    @include md{
+      position: relative;
+      margin-top: 65px;
+      padding: 1.5rem;
+    }
+    
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: -50px;
+      right: 32px;
+      @include md{
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  &-btn{
+    width: 525px;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    @include xxl{
+      justify-content: center;
+    }
+    @include lg{
+      justify-content: start;
+    }
+    @include md{
+      position: relative;
+      justify-content: center;
+      width: auto;
+    }
+  }
+  &-pagination{
+    width: auto !important;
+    padding: 0 16px;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    position: relative;
+    margin-top: 0;
+    left: 0;
+    &::after{
+      content: "";
+    }
+  }
+  .swiper-pagination-bullet{
+    background-color: $primary;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    width: 16px;
+    border-radius: 10px;
+  }
+}
+
+.reserve{
+  border-radius: 24px;
+  
+  .material-icons{
+    @include text(5rem, 5rem);
+  }
+  h3{
+    @include title();
+    span{
+      @include text();
+      font-weight: normal;
+    }
+    @include lg{
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+  }
+  a{
+    &:hover{
+      background-image: linear-gradient(to top, $primary , $info);
+    }
+    @include md{
+      background-image: linear-gradient(to top, $primary , $info);
+      border:none !important;
+    }
+  }
+}

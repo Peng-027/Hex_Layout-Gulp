@@ -1,0 +1,42 @@
+.navbar{
+
+  &::after, &::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+  }
+  &::after{
+    background-color: #62DB54;
+  }
+  &::before{
+    background-color: #09ACF5;
+    right: 0;
+  }
+  &-brand{
+    height: 42px;
+    width: 170px;
+    background: url("../images/logo.svg") no-repeat center;
+
+    @include md{
+      background: url("../images/logo2.svg") no-repeat left;
+    }
+  }
+  &-toggler{
+    border:none;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  @include lg{
+    .navbar-nav{
+      align-items: center;
+    }
+  }
+  .nav-link{
+    &:hover{
+      color: $primary !important;
+    }
+  }
+}
