@@ -1,5 +1,5 @@
 ---
-title: Boostrap Index
+title: Program Tutor
 layout: ./app/layout.ejs
 engine: ejs
 current: index
@@ -9,7 +9,7 @@ current: index
   <div class="container">
     <div class="row">
       <div class="col-xl-6 mx-auto">
-        <div class="text-center border border-white  position-relative py-5">
+        <div class="text-center border border-white position-relative py-5 animate__animated animate__fadeInDown animate__flipInX">
           <h2 class="text-white mb-5">
             <span>全台最豐富的程式家教</span>
             <br>
@@ -28,24 +28,24 @@ current: index
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
-          <h3 class="text-lg-start title">手把手帶你<br>親自到家教到會</h3>
+          <h3 class="text-lg-start title" data-aos="fade-right">手把手帶你<br>親自到家教到會</h3>
         </div>
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-          <div class="text-center text-light py-6 introduce-card">
+          <div class="text-center text-light py-6 introduce-card" data-aos="flip-right" data-aos-delay="500">
             <span class="material-icons">code</span>
             <h4 class="pt-4 pb-3">超過100種專業課程</h4>
             <p>學習標準化的電腦形式語言<br>培養運算思維和邏輯素養</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-          <div class="text-center text-light py-6 introduce-card">
+          <div class="text-center text-light py-6 introduce-card" data-aos="flip-right" data-aos-delay="1000">
             <span class="material-icons">rocket_launch</span>
             <h4 class="pt-4 pb-3">高效學習</h4>
             <p>客製化專屬課表<br>讓學習變簡單</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-          <div class="text-center text-light py-6 introduce-card">
+          <div class="text-center text-light py-6 introduce-card" data-aos="flip-right" data-aos-delay="1500">
             <span class="material-icons">fmd_good</span>
             <h4 class="pt-4 pb-3">指定地點</h4>
             <p>專業老師到你指定的地點<br>一對一高效學習</p>
@@ -56,28 +56,28 @@ current: index
   </section>
 
   <section class="container py-8 class">
-    <h3 class="title mb-7">預期上課流程</h3>
+    <h3 class="title mb-7 aos-init aos-animate" data-aos="fade-right">預期上課流程</h3>
     <div class="row">
       <div class="col-xl-3 col-md-6 mb-6 mb-xl-0">
-        <div class="text-white border border-white p-6 class-card class-cardA">
+        <div class="text-white border border-white p-6 class-card class-cardA" data-aos="fade-up" data-aos-delay="500">
           <h4>預約</h4>
           <p class="mt-3">線上預約指定課程與老師<br>由老師安排專屬課程</p>
         </div>
       </div>
       <div class="col-xl-3 col-md-6 mb-6 mb-xl-0">
-        <div class="text-white border border-white p-6 class-card class-cardB">
+        <div class="text-white border border-white p-6 class-card class-cardB" data-aos="fade-up" data-aos-delay="1000">
           <h4>付款</h4>
           <p class="mt-3">支援各種支付方式<br>提供12期分期付款</p>
         </div>
       </div>
       <div class="col-xl-3 col-md-6 mb-6 mb-xl-0">
-        <div class="text-white border border-white p-6 class-card class-cardC">
+        <div class="text-white border border-white p-6 class-card class-cardC" data-aos="fade-up" data-aos-delay="1500">
           <h4>上課</h4>
           <p class="mt-3">地點由您指定<br>密集性一對一教學</p>
         </div>
       </div>
       <div class="col-xl-3 col-md-6 mb-6 mb-xl-0">
-        <div class="text-white border border-white p-6 class-card class-cardD">
+        <div class="text-white border border-white p-6 class-card class-cardD" data-aos="fade-up" data-aos-delay="2000">
           <h4>提供滿意度</h4>
           <p class="mt-3">提供課程滿意度及回饋<br>讓我們持續成長與進步</p>
         </div>
@@ -87,7 +87,7 @@ current: index
 
   <section class="py-8 bg-dark program">
     <div class="container">
-      <h3 class="title mb-6">你想學的程式，都在這裡</h3>
+      <h3 class="title mb-6" data-aos="fade-right">你想學的程式，都在這裡</h3>
       <div class="swiper program-swiper text-white ">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -129,10 +129,10 @@ current: index
   </section>
 
   <section class="container course py-8">
-    <h3 class="title mb-6">熱門推薦課程</h3>
+    <h3 class="title mb-6" data-aos="fade-right">熱門推薦課程</h3>
     <div class="row">
       <div class="col-xl-3 col-md-6 mb-3 mb-xl-0">
-        <a href="#" class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center">
+        <a href="./introduce.html" class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center" data-aos="flip-right" data-aos-delay="500">
           <img src="./assets/images/teacher01.jpg" alt="teacher01">
           <p class="text-center pt-2 pb-4">Belinda</p>
           <h4 class="fs-5">基礎前端-HTML</h4>
@@ -142,8 +142,7 @@ current: index
         </a>
       </div>
       <div class="col-xl-3 col-md-6 mb-3 mb-xl-0">
-        <a href="#"
-          class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center">
+        <a href="./introduce.html" class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center" data-aos="flip-right" data-aos-delay="1000">
           <img src="./assets/images/teacher02.jpg" alt="teacher01">
           <p class="text-center pt-2 pb-4">Guava</p>
           <h4 class="fs-5">2022 Python 全攻略｜從入門到實務</h4>
@@ -154,8 +153,7 @@ current: index
         </a>
       </div>
       <div class="col-xl-3 col-md-6 mb-3 mb-xl-0">
-        <a href="#"
-          class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center">
+        <a href="./introduce.html" class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center" data-aos="flip-right" data-aos-delay="1500">
           <img src="./assets/images/teacher03.jpg" alt="teacher01">
           <p class="text-center pt-2 pb-4">Joe</p>
           <h4 class="fs-5">活用 Line Bot ｜APP 開發到上架完整實戰攻略</h4>
@@ -166,8 +164,7 @@ current: index
         </a>
       </div>
       <div class="col-xl-3 col-md-6 mb-3 mb-xl-0">
-        <a href="#"
-          class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center">
+        <a href="./introduce.html" class="course-card bg-dark text-white position-relative pt-4 pb-3 px-4 d-flex flex-column justify-content-center" data-aos="flip-right" data-aos-delay="2000">
           <img src="./assets/images/teacher04.jpg" alt="teacher01">
           <p class="text-center pt-2 pb-4">Lina</p>
           <h4 class="fs-5">Linux 零基礎七天入門｜入門到實務</h4>
@@ -179,10 +176,10 @@ current: index
       </div>
     </div>
     <div class="d-flex justify-content-center pt-6">
-      <a href="#" class="course-btn">所有課程列表</a>
+      <a href="./course.html" class="course-btn">所有課程列表</a>
     </div>
   </section>
-
+  
   <section class="container-fluid px-0 py-8 learn">
     <ul class="row m-0 list-unstyled">
       <li class="col-xl-3 col-lg-6 p-0">
@@ -229,7 +226,7 @@ current: index
   </section>
 
   <section class="container share py-8">
-    <h3 class="title mb-7">文章分享</h3>
+    <h3 class="title mb-7" data-aos="fade-right">文章分享</h3>
     <div class="row">
       <div class="col-lg-4">
         <div class="p-0 p-sm-5 mb-4 mb-sm-0 position-relative share-card">
@@ -272,7 +269,7 @@ current: index
 
   <section class="join py-8">
     <div class="container">
-      <h3 class="title mb-6">專屬你的學習課程<br>超過 3000 位學員得到了程式超能力</h3>
+      <h3 class="title mb-6" data-aos="fade-right">專屬你的學習課程<br>超過 3000 位學員得到了程式超能力</h3>
       <div class="swiper join-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">

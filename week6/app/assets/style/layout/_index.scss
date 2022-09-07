@@ -39,4 +39,33 @@
       color: $primary !important;
     }
   }
+  .modal-body{
+    input{
+      min-width: 330px;
+    }
+    .user-btn{
+      background-image: linear-gradient(to left, $primary, $info);
+      border-radius: 8px;
+      transition: all .2s ease-in;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+    img{
+      left: 20%;
+    }
+  }
+  .btn-close{
+    background: none;
+    opacity: 1;
+  }
+}
+
+.footer{
+  p{
+    @include text();
+    @include md{
+      @include text(12px, 14px);
+    }
+  }
 }

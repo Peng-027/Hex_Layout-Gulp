@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/style/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./assets/style/all.css">
     <link rel="shortcut icon" href="./assets/images/logo2.svg" type="image/x-icon">
   </head>
@@ -16,24 +19,60 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
       <div class="container">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="./index.html"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="material-icons text-primary">drag_handle</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">首頁</a>
+              <a class="nav-link text-white" aria-current="page" href="./index.html">首頁</a>
             </li>
             <li class="nav-item px-lg-5">
-              <a class="nav-link text-white" href="#">課程介紹</a>
+              <a class="nav-link text-white" href="./course.html">課程介紹</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link text-white d-flex align-items-center" href="#" tabindex="-1" aria-disabled="true">
+              <a class="btn nav-link shadow-none text-white d-flex align-items-center" href="#" tabindex="-1" aria-disabled="true"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <span class="material-icons">account_circle</span>
                 登入
               </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-dark border border-white">
+                    <div class="modal-header border-bottom-0">
+                      <h5 class="modal-title text-white ms-auto" id="exampleModalLabel">登入</h5>
+                      <button type="button" class="btn-close d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons text-white">close</span></button>
+                    </div>
+                    <div class="modal-body mx-auto">
+                      <label for="mail" class="text-white d-block">
+                        信箱
+                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="mail" type="text" placeholder="請輸入信箱">
+                      </label>
+                      <label for="password" class="text-white d-block pt-4">
+                        密碼
+                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="password" type="password"
+                          placeholder="請輸入密碼">
+                      </label>
+                      <a href="#" class="user-btn text-white d-block mt-4 mb-4 mb-md-6 py-2 text-center">登入</a>
+                      <p class="text-light d-flex align-items-center justify-content-between mb-3">
+                        <span class="w-25 bg-light" style="height: 1px;"></span>
+                        <span>其他登入方式</span>
+                        <span class="w-25 bg-light" style="height: 1px;"></span>
+                      </p>
+                      <a href="#" class="text-white py-2 mb-4 position-relative d-block text-center border border-white rounded-3">
+                        <img width="24" height="24" class="position-absolute top-50 translate-middle" src="./assets/images/icon_fb.svg" alt="icon_fb">
+                        Facebook登入
+                      </a>
+                      <a href="#" class="text-white py-2 mb-4 position-relative d-block text-center border border-white rounded-3">
+                        <img width="24" height="24" class="position-absolute top-50 translate-middle" src="./assets/images/icon_google.svg" alt="icon_google">
+                        Google登入
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -47,7 +86,10 @@
         <p class=" text-center text-light">Coding Home © 2022 All Rights Reserved</p>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

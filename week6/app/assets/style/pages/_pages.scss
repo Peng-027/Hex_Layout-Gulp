@@ -1,0 +1,276 @@
+// course
+.course{
+
+  &-list{
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    &:hover{
+      transform: scale(1.02);
+    }
+    
+    &-info{
+      @media (min-width: 992px) {
+        margin-left: -24px; 
+      }
+    }
+    h3{
+      @include title(1.5rem, 2.25rem);
+    }
+    h4{
+      @include text(32px, 37px)
+    }
+    p{
+      @include text();
+      max-width: 576px;
+    }
+  }
+}
+
+.course-nav {
+
+  &::-webkit-scrollbar {
+    height: 3px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $primary;
+  }
+
+  a {
+    transition: all .2s ease-in;
+
+    &:hover {
+      background-color: $primary;
+      color: $secondary  !important;
+      border-color: $secondary  !important;
+    }
+  }
+}
+
+.course-list-btn {
+  padding: 8px 48px;
+  border-radius: 8px;
+  @include text();
+  transition: all .2s ease-in;
+
+  @include lg {
+    padding: 8px 16px;
+  }
+
+  &:hover {
+    transform: scale(1);
+    font-weight: bold;
+    background-color: $primary;
+    color: #fff;
+    background-image: none;
+  }
+}
+
+//introduce
+
+.introduce{
+
+  .course-list{
+    cursor: default;
+    &:hover{
+      transform: scale(1);
+    }
+  }
+  &-title{
+    color: #fff;
+    padding-bottom: 1rem;
+    @include text(20px, 29px);
+  }
+  &-edu{
+    border-radius: 24px;
+    &-title{
+      min-width: 40px;
+    }
+  }
+  &-icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    @include text(2rem, 2rem);
+    background-image: linear-gradient(to top, $primary, $info);
+  }
+  &-course{
+    border-radius: 24px;
+    h4, li{
+      position: relative;
+      padding-left: 13px;
+      &:after{
+        content: "";
+        background-color: $primary;
+        position: absolute;
+        left: 0;
+      }
+    }
+    h4{
+      @include text();
+      margin-bottom: 16px;
+      
+      &::after{
+        height: 100%;
+        width: 2px;
+        top: 0;
+      }
+    }
+    li{
+      position: relative;
+      padding-left: 13px;
+      &::after{
+        height: 5px;
+        width: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  
+  &-price{
+    &::after{
+      @include square(0,0);
+    }
+    &::before{
+      @include square(0, 100%);
+    }
+    li{
+      border-bottom: 1px solid #fff;
+      padding: 16px 0;
+    
+      &:first-child{
+        padding-top: 0;
+      }
+      &:last-child{
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      p, .material-icons{
+        transition: all .2s ease-in;
+      }
+      &:hover{
+        p{
+          color: $primary;
+        }
+        .material-icons{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &-price-list{
+    &::after{
+      @include square(100%, 0);
+    }
+    &::before{
+      @include square(100%, 100%);
+    }
+  }
+  
+}
+
+//register
+
+.register{
+
+  &-card{
+    margin: 168px -86px 0 0;
+    position: relative;
+    padding: 48px 32px;
+    @include lg{
+      margin: 0 0 44px 0;
+    }
+    &::after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0 12px 12px;
+      border-color: transparent transparent transparent #2D2D2D;
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include lg{
+        right: 50%;
+        top: calc(100% + 6px);
+        border-width: 12px 12px 0 12px;
+        border-color: #2D2D2D transparent transparent transparent;
+      }
+    }
+
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid $primary;
+    }
+    h2{
+      @include text();
+      font-weight: bold;
+    }
+  }
+  &-form{
+    padding: 48px 32px 48px 114px;
+    margin-bottom: 144px;
+    box-shadow: 0 4px 18px #0000002E;
+    @include lg{
+      padding: 48px;
+    }
+    @include md{
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    h1{
+      @include title();
+    }
+    h3{
+      @include title(18px, 26px);
+    }
+    li{
+      text-align: center;
+      a{
+        border: 1px solid #fff;
+        display: block;
+        padding: 16px 0;
+        border-radius: 8px;
+        color: #fff;
+        transition: all .2s ease-in;
+        &:hover{
+          color: $primary;
+          border-color: $primary;
+        }
+        @media (min-width: 1200px) {
+          padding: 16px 32px;
+        }
+      }
+      &:first-child{
+        a{
+          color: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+    .form-select{
+      height: 44px;
+      box-shadow: none;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNic+PHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnIHN0cm9rZS13aWR0aD0nMicgZD0nTTIgNWw2IDYgNi02Jy8+PC9zdmc+");
+    }
+    .datepicker-cell.selected, .datepicker-cell.selected:hover {
+      background: #62db54;
+    }
+  }
+}
+.pay, .success{
+  height: 77vh;
+  @include lg{
+    height: 80vh;
+  }
+  @include sm{
+    height: auto;
+  }
+}
