@@ -1,1 +1,13 @@
-@import './layout/_index.scss';
+
+@import 
+  url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Squada+One&display=swap'),
+  
+  './base/base',
+  './layout/_layout.scss',
+  './pages/index'
+
+;
+
+
+// @import './base/base'
+// @import './pages/index';

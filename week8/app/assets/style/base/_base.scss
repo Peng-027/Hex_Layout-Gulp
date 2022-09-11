@@ -1,0 +1,59 @@
+/*---------------
+    $color
+---------------*/
+$primary: #E6553B;
+$secondary: #53C139;
+$light: #F0F0F0;
+$dark: #808080;
+
+/*---------------
+  $breakpoints
+---------------*/
+@mixin xxl {
+    @media (max-width:1400px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width:992px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width:576px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width:375px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media (max-width:351px) {
+        @content;
+    }
+}
+
+/*---------------
+    $global
+---------------*/
+body{
+    background-color: $light;
+}

@@ -1,0 +1,45 @@
+.navbar{
+  &-brand{
+    img{
+      @include lg{
+        max-width: 85px;
+      }
+    }
+  }
+  &-toggler{
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}
+.nav-item{
+  @include lg{
+    width: 100%;
+    text-align: center;
+    border-right: none !important;
+    &:nth-child(2){
+      border-bottom: 1px solid #000;
+    }
+  }
+ 
+}
+.nav-link{
+  &:hover{
+    span, i{
+      color: $primary;
+    }
+  }
+
+  input{
+    min-width: 288px;
+    &:focus, &:focus-visible{
+      background-color: $light;
+      border: none;
+      outline: none;
+    }
+  }
+}
+.header-item{
+  min-width: 32px;
+  display: block;
+}
