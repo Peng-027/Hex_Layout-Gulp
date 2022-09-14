@@ -1,7 +1,7 @@
 .navbar{
   &-brand{
     img{
-      @include lg{
+      @include max-lg{
         max-width: 85px;
       }
     }
@@ -11,9 +11,15 @@
       box-shadow: none;
     }
   }
+  &-collapse{
+    @include max-lg{
+      border-top: 1px solid #000;
+      background-color: #fff;
+    }
+  }
 }
 .nav-item{
-  @include lg{
+  @include max-lg{
     width: 100%;
     text-align: center;
     border-right: none !important;

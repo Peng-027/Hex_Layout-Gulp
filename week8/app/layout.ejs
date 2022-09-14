@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
+    <link rel="shortcut icon" href="./assets/images/logo-1.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
   integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/style/bootstrap.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-black py-0">
-      <div class="container-fluid container-lg">
-        <a class="navbar-brand flex-grow-1 py-3 py-lg-5" href="./index.html">
+      <div class="container-lg px-0">
+        <a class="navbar-brand flex-grow-1 py-3 py-lg-5 px-3" href="./index.html">
           <img src="./assets/images/logo.svg" alt="logo">
         </a>
         <i class="fa-solid fa-magnifying-glass fs-3 pe-4 d-lg-none"></i>
@@ -23,7 +25,7 @@
           <i class="fa-solid fa-bars text-black fs-3"></i>
         </button>
         
-        <div class="collapse navbar-collapse flex-grow-0 bg-white" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse flex-grow-0 px-3" id="navbarSupportedContent">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item border-start border-end border-black d-none d-lg-block">
               <a class="nav-link active p-0" href="#">
@@ -33,7 +35,7 @@
                 </label>
               </a>
             </li>
-            <li class="nav-item border-end border-black border-lg-white">
+            <li class="nav-item border-end border-black">
               <a class="nav-link active py-4 py-lg-6 px-7 fw-bold fs-6" href="#">
                 <span class="header-item">探索</span>
               </a>
@@ -44,9 +46,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active py-3 mb-2 py-lg-5 ps-lg-7 border border-black bg-primary" href="#">
-                <span class="d-lg-none text-white">連結錢包</span>
-                <i class="fa-solid fa-wallet fs-3 d-none d-block"></i>
+              <a class="nav-link active mb-2 mb-lg-0 py-lg-5 ps-lg-7" href="#">
+                <span class="d-lg-none text-white btn-primary d-block border border-black py-3">連結錢包</span>
+                <i class="fa-solid fa-wallet fs-3 d-none d-lg-block"></i>
               </a>
             </li>
           </ul>
@@ -56,10 +58,16 @@
 
     <%- contents %>
 
-    <footer class="footer">
-      footer
+    <footer class="footer p-1 px-0 border-top border-black mt-6 mt-lg-8">
+      <div class="container-fluid py-4 border-4 border-top bprder-black">
+        <p class="text-center">© ART NFT. All Rights Reserved</p>
+      </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+      async></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

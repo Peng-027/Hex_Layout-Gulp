@@ -9,51 +9,200 @@ $dark: #808080;
 /*---------------
   $breakpoints
 ---------------*/
-@mixin xxl {
-    @media (max-width:1400px) {
-        @content;
-    }
+// min-width
+@mixin min-xxs {
+  @media (min-width:351px) {
+    @content;
+  }
+}
+@mixin min-xs {
+  @media (min-width:375px) {
+    @content;
+  }
+}
+@mixin min-sm {
+  @media (min-width:576px) {
+    @content;
+  }
+}
+@mixin min-md {
+  @media (min-width:767px) {
+    @content;
+  }
+}
+@mixin min-lg {
+  @media (min-width:992px) {
+    @content;
+  }
+}
+@mixin min-xl {
+  @media (min-width:1200px) {
+    @content;
+  }
+}
+@mixin min-xxl {
+  @media (min-width:1400px) {
+    @content;
+  }
 }
 
-@mixin xl {
-    @media (max-width:1200px) {
-        @content;
-    }
+// max-width
+@mixin max-xxs {
+  @media (max-width: 350.98px) {
+    @content;
+  }
+}
+@mixin max-xs {
+  @media (max-width: 374.98px) {
+    @content;
+  }
+}
+@mixin max-sm {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+@mixin max-md {
+  @media (max-width: 766.98px) {
+    @content;
+  }
+}
+@mixin max-lg {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+@mixin max-xl {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+@mixin max-xxl {
+  @media (max-width: 1399.98px) {
+    @content;
+  }
 }
 
-@mixin lg {
-    @media (max-width:992px) {
-        @content;
-    }
+
+@mixin title($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: bold;
 }
 
-@mixin md {
-    @media (max-width:767px) {
-        @content;
-    }
-}
-
-@mixin sm {
-    @media (max-width:576px) {
-        @content;
-    }
-}
-
-@mixin xs {
-    @media (max-width:375px) {
-        @content;
-    }
-}
-
-@mixin xxs {
-    @media (max-width:351px) {
-        @content;
-    }
+@mixin text($fz: 18px, $lh: 19px) {
+  font-size: $fz;
+  line-height: $lh;
 }
 
 /*---------------
     $global
 ---------------*/
 body{
-    background-color: $light;
+  background-color: $light;
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+// margin -1px
+.t-n1{
+  margin-top: -1px;
+}
+.b-n1 {
+  margin-bottom: -1px;
+}
+.s-n1 {
+  margin-left: -1px;
+}
+.e-n1{
+  margin-right: -1px;
+}
+
+// font-family
+.fm-primary{
+  font-family: 'Squada One';
+}
+
+//object-fit
+.obj-fit{
+  object-fit: cover;
+}
+
+// btn
+.btn{
+  &:focus{
+    box-shadow: none;
+  }
+}
+.btn-triangle{
+  position: relative;
+  padding: 8px 48px;
+  font-family: 'Squada One';
+  @include text();
+  transition: all .2s ease-in;
+  &:hover{
+    color: #fff;
+  }
+  
+  &::after{
+    content: "";
+    border-style: solid;
+    border-width: 0 0 16px 16px;
+    border-color: transparent transparent $primary transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all .2s ease-in;
+  }
+  &:hover::after{
+    border-color: transparent transparent #000 transparent;
+  }
+}
+
+.btn-fff{
+  background-color: #fff;
+  border: 1px solid #000;
+  &:hover{
+    background-color: $primary;
+  }
+}
+
+.btn-f0f0{
+
+  &:hover{
+    background-color: $primary;
+    border: 1px solid #000;
+  }
+}
+
+// title
+.title{
+  font-family: 'Squada One';
+  @include text(48px, 50px);
+  
+  @include max-md{
+    @include text(32px, 34px);
+  }
+  span{
+    margin-left: 16px;
+    font-family: var(--bs-body-font-family);
+    @include title(20px, 36px);
+  }
+}
+
+.main-title{
+  &::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }

@@ -1,59 +1,485 @@
 ---
-title: Boostrap Index
+title: NFT
 layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-
-<div class="container">
-  <h1 class="index__h1">這是一段話</h1>
-  <i class="fa-solid fa-wallet"></i>
-  <div class="alert alert-black" role="alert">
-    A simple primary alert—check it out!
-  </div>
-  <div class="alert alert-secondary" role="alert">
-    A simple secondary alert—check it out!
-  </div>
-  <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
-  </div>
-  <div class="alert alert-warning" role="alert">
-    A simple warning alert—check it out!
-  </div>
-  <div class="alert alert-info" role="alert">
-    A simple info alert—check it out!
-  </div>
-  <div class="alert alert-light" role="alert">
-    A simple light alert—check it out!
-  </div>
-  <div class="alert alert-dark" role="alert">
-    A simple dark alert—check it out!
-  </div>
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<main>
+  <section class="container-lg recommend px-0 px-lg-3 pt-lg-6 t-n1 mt-lg-0">
+    <div class="row g-0 border border-black bg-white">
+      <div class="col-md-8">
+        <div class="position-relative">
+          <img src="./assets/images/art01.jpg" alt="art01">
+          <p class="position-absolute top-0 start-0 d-none d-md-flex align-items-center h-100 text-white bg-black m-0 pt-4 px-4 fs-1 fm-primary" style="writing-mode: vertical-lr;">Recommend<span class="fs-4 text-center fw-bold pt-3 pe-2">推薦系列</span></p>
+        </div>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="col-md-4">
+        <div class=" px-4 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <h2 class="fs-5 fm-primary pt-5 pt-md-4 pt-xl-8">Kemus Wu</h2>
+            <h1 class="pt-1">瞳孔:流動的脈絡</h1>
+            <p class="fs-6 pt-4 pb-4 pb-md-0">眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界</p>
+          </div>
+          <a href="#" class="btn btn-triangle btn-fff mt-auto ms-auto mb-4 mt-4 mt-lg-0">MORE</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <div class="row g-0 border border-black bg-white t-n1">
+      <div class="col-md-6">
+        <div class="row g-0 flex-md-row-reverse flex-column-reverse flex-lg-row h-100">
+          <div class="col-md-6">
+            <div class="d-flex flex-column justify-content-between px-4 pt-5 pt-md-4 pt-lg-7 pb-4 h-100">
+              <div class="">
+                <h4 class="fs-5">Joanne</h4>
+                <h3 class="pt-1">海洋波度</h3>
+                <p class="pt-4 fs-6">海洋的奧秘向我們揭示了深不可測的一面，它的深度——反映了我們的恐懼、同時也吸引著我們。</p>
+              </div>
+              <a href="#" class="btn btn-triangle btn-fff ms-auto mt-4 mt-lg-0">more</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 recommend-img">
+              <img class="h-100 obj-fit" src="./assets/images/art02.jpg" alt="art02">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 flex-md-row-reverse flex-column-reverse flex-lg-row">
+          <div class="col-md-6">
+            <div class="d-flex flex-column justify-content-between px-4 pt-5 pt-md-4 pt-lg-7 pb-4 h-100">
+              <div class="">
+                <h4 class="fs-5">Michael</h4>
+                <h3 class="pt-1">我家窗前的鳥</h3>
+                <p class="pt-4 fs-6">家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。</p>
+              </div>
+              <a href="#" class="btn btn-triangle btn-fff ms-auto mt-4 mt-lg-0">more</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="h-100 recommend-img">
+              <img class="h-100 obj-fit" src="./assets/images/art21.jpg" alt="art21">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pt-6 pt-md-8 ranking">
+    <div class="d-flex justify-content-between pb-1 pb-md-3 mb-4 mb-md-6 position-relative">
+      <h3 class="title main-title">Ranking<span>市價排行榜</span></h3>
+      <a href="#" class="btn btn-triangle btn-f0f0 position-absolute bottom-0 end-0">more</a>
+    </div>
+    <div class="row d-none d-lg-flex">
+      <div class="col-lg-4">
+        <div class="ranking-card-lg position-relative d-flex flex-column">
+          <h5>1</h5>
+          <a href="#">
+            <div class="ranking-img">
+              <img src="./assets/images/art04.jpg" alt="art04">
+              <a href="#" class="btn btn-triangle btn-fff">more</a>
+            </div>
+          </a>
+          <div class="d-flex flex-column">
+            <h4>散步遇到的女人</h4>
+            <p class="d-flex justify-content-between fm-primary">
+              Zoe Jiang
+              <span>
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ranking-card-lg position-relative d-flex flex-column">
+          <h5>2</h5>
+          <a href="#">
+            <div class="ranking-img">
+              <img src="./assets/images/art05.jpg" alt="art05">
+              <a href="#" class="btn btn-triangle btn-fff">more</a>
+            </div>
+          </a>
+          <div class="d-flex flex-column">
+            <h4>爆炸頭的母親</h4>
+            <p class="d-flex justify-content-between fm-primary">
+              Yui
+              <span>
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ranking-card-lg position-relative d-flex flex-column">
+          <h5>3</h5>
+          <a href="#">
+            <div class="ranking-img">
+              <img src="./assets/images/art06.jpg" alt="art06">
+              <a href="#" class="btn btn-triangle btn-fff">more</a>
+            </div>
+          </a>
+          <div class="d-flex flex-column">
+            <h4>夏天的時候</h4>
+            <p class="d-flex justify-content-between fm-primary">
+              Bug Lin
+              <span>
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-lg-none">
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>1</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art04.jpg" alt="art4">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>散步遇到的女人</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Zoe Jiang</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>2</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art05.jpg" alt="art5">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>爆炸頭的母親</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Yui</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>3</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art06.jpg" alt="art6">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>夏天的時候</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Bug Lin</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>4</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art13.jpg" alt="art13">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>追求者送我的花</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Michael</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>5</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art07.jpg" alt="art7">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>今天釣到的魚</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Wei JJ</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="row g-0 ranking-card-sm">
+          <div class="col-1 d-flex justify-content-center align-items-center">
+            <h5>6</h5>
+          </div>
+          <div class="col-lg-2 col-md-3 col-2">
+            <div class="ranking-img">
+              <span>more</span>
+              <img src="./assets/images/art08.jpg" alt="art8">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8 col-9">
+            <h4>人生中的貓咪們</h4>
+            <div class="d-flex justify-content-between align-items-center t-n1">
+              <p>Even Lai</p>
+              <div class="pe-3">
+                <i class="fab fa-ethereum"></i>
+                <span class="ps-1">300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container pt-6 pt-md-8 artist">
+    <div class="d-flex justify-content-between pb-1 pb-md-3 mb-4 mb-md-6 position-relative">
+      <h3 class="title main-title">Artist<span>熱門藝術家</span></h3>
+      <a href="#" class="btn btn-triangle btn-f0f0 position-absolute bottom-0 end-0">more</a>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="position-relative">
+            <img src="./assets/images/artist01.jpg" alt="artist01">
+            <h3>Antony Wu</h3>
+            <a href="#" class="btn btn-triangle btn-fff">more</a>
+            <p>​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="position-relative">
+            <img src="./assets/images/artist02.jpg" alt="artist02">
+            <h3>Antony Wu</h3>
+            <a href="#" class="btn btn-triangle btn-fff">more</a>
+            <p>​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="position-relative">
+            <img src="./assets/images/artist03.jpg" alt="artist03">
+            <h3>Antony Wu</h3>
+            <a href="#" class="btn btn-triangle btn-fff">more</a>
+            <p>​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="position-relative">
+            <img src="./assets/images/artist04.jpg" alt="artist04">
+            <h3>Antony Wu</h3>
+            <a href="#" class="btn btn-triangle btn-fff">more</a>
+            <p>​喜愛大自然，創作題材常見大山、大水、花草與樹木。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="container pt-6 pt-md-8 artwork">
+    <div class="d-flex justify-content-between pb-1 pb-md-3 mb-4 mb-md-6 position-relative">
+      <h3 class="title main-title">Artwork<span>最新藝術品</span></h3>
+      <a href="#" class="btn btn-triangle btn-f0f0 position-absolute bottom-0 end-0">more</a>
+    </div>
+
+    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 743px;">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 0%; top: 0px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art09.jpg" alt="art09">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </div>
+          <p class="fw-bold py-3 border-bottom border-black">區塊戀-他的私生活</p>
+          </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art10.jpg" alt="art10">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">夏娃的醜聞</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art02.jpg" alt="art02">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">藍色啤酒海</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 33.3333%; top: 201px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art11.jpg" alt="art11">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">沒有人愛我</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 33.3333%; top: 340px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art12.jpg" alt="art12">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">不哭不哭眼淚是珍珠</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 0%; top: 362px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art03.jpg" alt="art03">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">十分鐘就到</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 66.6667%; top: 378px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art04.jpg" alt="art04">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">我這樣有美嗎</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-4" style="position: absolute; left: 66.6667%; top: 517px;">
+        <div class="card p-1 p-lg-3">
+          <a href="#">
+            <div class="position-relative">
+              <img src="./assets/images/art27.jpg" alt="art27">
+              <div class="artwork-card">
+                <p class="pb-3">唯一想擁有的人，唯一不可以擁有的</p>
+                <span>
+                  <i class="fab fa-ethereum"></i>
+                  <span class="ps-1">300</span>
+                </span>
+                <a href="#" class="btn btn-triangle btn-fff ms-auto mt-auto">more</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <p class="fw-bold py-3 border-bottom border-black">我真的受傷了</p>
+      </div>
+    </div>
+  </section>
+</main>
+
