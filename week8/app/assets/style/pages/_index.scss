@@ -190,23 +190,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  img{
+    width: 306px;
+  }
+  
 }
 .swiper-slide-visible {
   max-width: calc(25% - 24px);
-
   img {
     filter: grayscale(100%);
+    width: auto;
+  }
+  @include max-md{
+    display: none;
   }
 }
-.swiper-slide-next{
+.swiper-slide-active{
   min-width: 50%;
   overflow: hidden;
   cursor: pointer;
   
+  @include max-md{
+    min-width: 100%;
+    display: block;
+  }
   img{
     filter: grayscale(0);
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    width: auto;
   }
   h3,a,p{
     display: block;
@@ -220,6 +232,9 @@
     color: #fff;
     max-width: 258px;
     top: 0;
+    @include max-md{
+      @include text(32px, 34px);
+    }
   }
   p{
     bottom: 0;
@@ -228,16 +243,36 @@
     @include min-md{
       max-width: 307px;
     }
+    @include max-xl{
+      display: none;
+    }
+    @include max-md{
+      position: relative;
+      margin: 16px 0;
+      display: block;
+    }
   }
   a{
     bottom: 0;
     right: 0;
+    @include max-md{
+      bottom: 20%;
+    }
+    @include max-sm{
+      bottom: 25%;
+    }
+    @include max-xs{
+      bottom: 30%;
+    }
   }
 }
 
 .swiper-pagination{
   position: relative;
   margin-top: 48px;
+  @include max-md{
+    margin-top: 24px;
+  }
 }
 .swiper-pagination-bullet{
   border-radius: 0;
@@ -254,7 +289,6 @@
 
   .card{
     cursor: pointer;
-
     &:hover{
       @include min-lg{
         .artwork-card{
@@ -289,11 +323,26 @@
       transform: translate(-50%, -50%);
     }
   }
+  .btn-triangle{
+    @include min-xl{
+      display: none;
+    }
+    @include min-xxl{
+      display: block;
+    }
+  }
   img{
-    // max-width: auto;
-    // min-height: 254px;
     height: auto;
     object-fit: cover;
     object-position: center;
+  }
+}
+
+.join{
+  i{
+    @include text(40px);
+    height: 40px;
+    width: 48px;
+    color: $primary;
   }
 }
