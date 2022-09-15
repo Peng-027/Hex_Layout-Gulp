@@ -433,7 +433,13 @@ a, a:hover {
 }
 
 .swiper-slide-visible {
-  max-width: calc(25% - 24px);
+  max-width: calc(33.333% - 72px);
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide-visible {
+    max-width: calc(30% - 72px);
+  }
 }
 
 .swiper-slide-visible img {
