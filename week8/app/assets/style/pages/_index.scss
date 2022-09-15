@@ -196,7 +196,10 @@
   
 }
 .swiper-slide-visible {
-  max-width: calc(25% - 24px);
+  max-width: calc(33.333% - 72px);
+  @include min-xl{
+    max-width: calc(30% - 72px);
+  }
   img {
     filter: grayscale(100%);
     width: auto;
