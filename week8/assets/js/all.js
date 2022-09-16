@@ -2,6 +2,14 @@
 
 $(function () {
   console.log('Hello Bootstrap5');
+  $("#nav-profile-tab").on('click', function () {// //當圖片讀取完畢才執行
+    // $('.introduce-fall').imagesLoaded(function () {
+    //   //選擇瀑布流的區塊名稱
+    //   $('.introduce-fall').masonry({
+    //     itemSelector: ".item"
+    //   })
+    // });
+  });
 });
 var swiper = new Swiper(".mySwiper", {
   watchSlidesProgress: true,
