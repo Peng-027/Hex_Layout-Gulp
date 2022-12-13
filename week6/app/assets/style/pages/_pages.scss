@@ -69,6 +69,11 @@
   }
 }
 
+.info-primary {
+  color: $primary !important;
+  border-color: $primary !important;
+}
+
 //introduce
 
 .introduce{
@@ -265,12 +270,14 @@
     }
   }
 }
-.pay, .success{
-  height: 77vh;
-  @include lg{
-    height: 80vh;
-  }
+.success{
+  min-height: calc(100vh - 237px);
+
   @include sm{
-    height: auto;
+    min-height: calc(100vh - 225px);
   }
+}
+
+.message{
+  color: $primary;
 }
