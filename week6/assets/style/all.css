@@ -905,6 +905,11 @@ h1, h2, h3, h4, h5, h6, p {
   background-image: none;
 }
 
+.info-primary {
+  color: #62DB54 !important;
+  border-color: #62DB54 !important;
+}
+
 .introduce .course-list {
   cursor: default;
 }
@@ -1188,20 +1193,18 @@ h1, h2, h3, h4, h5, h6, p {
   background: #62db54;
 }
 
-.pay, .success {
-  height: 77vh;
-}
-
-@media (max-width: 992px) {
-  .pay, .success {
-    height: 80vh;
-  }
+.success {
+  min-height: calc(100vh - 237px);
 }
 
 @media (max-width: 576px) {
-  .pay, .success {
-    height: auto;
+  .success {
+    min-height: calc(100vh - 225px);
   }
+}
+
+.message {
+  color: #62DB54;
 }
 
 /*# sourceMappingURL=all.css.map */

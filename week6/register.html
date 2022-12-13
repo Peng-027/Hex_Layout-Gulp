@@ -45,17 +45,17 @@
                       <h5 class="modal-title text-white ms-auto" id="exampleModalLabel">登入</h5>
                       <button type="button" class="btn-close d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons text-white">close</span></button>
                     </div>
-                    <div class="modal-body mx-auto">
+                    <div class="modal-body mx-auto user-form">
                       <label for="mail" class="text-white d-block">
-                        信箱
-                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="mail" type="text" placeholder="請輸入信箱">
+                        <p class="text-light d-flex justify-content-between">信箱<span class="message userEmail"></span></p>
+                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="userEmail" type="text" placeholder="請輸入信箱">
                       </label>
                       <label for="password" class="text-white d-block pt-4">
-                        密碼
-                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="password" type="password"
-                          placeholder="請輸入密碼">
+                        <p class="text-light d-flex justify-content-between">密碼<span class="message userPass"></span></p>
+                        <input class="d-block text-white bg-secondary border border-white rounded-3 py-2 ps-3 mt-2" name="userPass" type="password"
+                          placeholder="請輸入密碼" maxlength="30">
                       </label>
-                      <a href="#" class="user-btn text-white d-block mt-4 mb-4 mb-md-6 py-2 text-center">登入</a>
+                      <a href="./index.html" class="user-btn check-btn text-white d-block mt-4 mb-4 mb-md-6 py-2 text-center">登入</a>
                       <p class="text-light d-flex align-items-center justify-content-between mb-3">
                         <span class="w-25 bg-light" style="height: 1px;"></span>
                         <span>其他登入方式</span>
@@ -122,17 +122,17 @@
           <h3 class="pb-4 pt-5">訂單資訊</h3>
           <div class="d-flex flex-column flex-lg-row">
             <label for="name" class="text-light w-100 me-lg-6 mb-4">
-              姓名
+              <p class="text-light d-flex justify-content-between">姓名<span class="message name"></span></p>
               <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="name" type="text" placeholder="請輸入姓名">
             </label>
             <label for="tel" class="text-light w-100 mb-4">
-              電話
-              <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="tel" type="text" placeholder="請輸入電話">
+              <p class="text-light d-flex justify-content-between">電話<span class="message phone"></span></p>
+              <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="phone" type="text" placeholder="請輸入電話" maxlength="10">
             </label>
           </div>
           <label for="mail" class="text-light w-100 me-6 mb-4">
-            Email
-            <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="mail" type="text" placeholder="請輸入Email">
+            <p class="text-light d-flex justify-content-between">信箱<span class="message email"></span></p>
+            <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="email" type="text" placeholder="請輸入Email">
           </label>
           <div class="d-flex flex-column flex-lg-row align-items-center">
             
@@ -148,18 +148,17 @@
               </select>
             </label>
             <label for="Date" class="text-dark w-100 mb-4">
-              <span class="text-light">想預約的日期</span>
-              <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="inputDate" type="text" placeholder="請選擇日期">
+              <p class="text-light d-flex justify-content-between">想預約的日期<span class="message date"></span></p>
+              <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="date" type="text" placeholder="請選擇日期">
             </label>
           </div>
           <label for="place" class="text-light w-100 me-6 mb-4">
-            上課地點
-            <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="place" type="text"
-              placeholder="請輸入上課地點">
+            <p class="text-light d-flex justify-content-between">上課地點<span class="message place"></span></p>
+            <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="place" type="text" value="台北分校">
           </label>
           <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
             <p class="fs-5 pb-4 pb-sm-0">NT1600</p>
-            <a href="./pay.html" class="course-btn px-5 text-center">前往結帳</a>
+            <a href="./pay.html" class="course-btn check-btn px-5 text-center">前往結帳</a>
           </div>
         </div>
   
@@ -172,11 +171,13 @@
       <div class="container py-4">
         <p class=" text-center text-light">Coding Home © 2022 All Rights Reserved</p>
       </div>
+        <input class="d-none check-btn" type="text" name="date">
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
