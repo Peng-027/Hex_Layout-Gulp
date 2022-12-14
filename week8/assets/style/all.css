@@ -214,12 +214,13 @@ a, a:hover {
 
 @media (min-width: 375px) {
   .recommend-img {
-    min-height: 340px;
+    max-height: 340px;
   }
 }
 
 @media (min-width: 767px) {
   .recommend-img {
+    height: 100%;
     border-left: 1px solid #000;
     margin-left: -1px;
   }
