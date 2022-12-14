@@ -1,12 +1,14 @@
 "use strict";
 
+// btn-toggle
 $(function () {
   $('.courseSlider-btn').on('click', function (e) {
     $('.courseSlider-btn').removeClass('info-primary');
     $(this).toggleClass('info-primary');
     e.preventDefault();
   });
-}); //program
+}); // swiper
+//program
 
 var program_swiper = new Swiper(".program-swiper", {
   slidesPerView: 9,
