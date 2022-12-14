@@ -18,7 +18,10 @@
   &-img{
     
     @include min-xs{
-      max-height: 340px;
+      max-height: 360px;
+      img{
+        max-height: 360px;
+      }
     }
     @include min-md {
       height: 100%;
