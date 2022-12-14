@@ -1,3 +1,4 @@
+// btn-toggle
 $(function() {
 
   $('.courseSlider-btn').on('click', function(e){
@@ -9,6 +10,8 @@ $(function() {
 
 });
 
+
+// swiper
 //program
 var program_swiper = new Swiper(".program-swiper", {
   slidesPerView: 9,
@@ -33,6 +36,7 @@ var join_swiper = new Swiper(".join-swiper", {
     crossFade: true
   },
 });
+
 
 // aos
 AOS.init({
@@ -60,7 +64,6 @@ const dateDatepicker = new Datepicker(elem, {
 
 
 // validate
-
 let dateInput = document.querySelector('input[name="date"]');
 let date = new Date().toLocaleDateString();
 dateInput.value = date;
@@ -249,5 +252,3 @@ document.querySelectorAll('.check-btn').forEach((check_item) => {
     }
   })
 })
-
-

@@ -63,13 +63,11 @@ current: index
             
             <label for="course" class="text-light w-100 mb-4 me-lg-6">課程
               <select class="form-select text-white border-white mt-2 bg-secondary">
-                <option selected>
-                  1堂50分鐘
-                </option>
+                <option value="0" selected>1堂50分鐘</option>
                 <option value="1">3堂50分鐘</option>
                 <option value="2">10堂50分鐘</option>
                 <option value="3">20堂50分鐘</option>
-                <option value="3">洽談報價</option>
+                <option value="4">洽談報價</option>
               </select>
             </label>
             <label for="Date" class="text-dark w-100 mb-4">
@@ -79,7 +77,12 @@ current: index
           </div>
           <label for="place" class="text-light w-100 me-6 mb-4">
             <p class="text-light d-flex justify-content-between">上課地點<span class="message place"></span></p>
-            <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="place" type="text" value="台北分校">
+            <!-- <input class="d-block text-white bg-secondary rounded-3 py-2 px-3 mt-2 w-100 border border-white" name="place" type="text" value="台北分校"> -->
+            <select class="form-select text-white border-white mt-2 bg-secondary" name="place">
+              <option value="0" selected>台北分校</option>
+              <option value="1">台中分校</option>
+              <option value="2">高雄分校</option>
+            </select>
           </label>
           <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
             <p class="fs-5 pb-4 pb-sm-0">NT1600</p>
