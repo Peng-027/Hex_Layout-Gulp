@@ -17,10 +17,11 @@
   }
   &-img{
     
-    // @include min-xs{
-    //   min-height: 340px;
-    // }
+    @include min-xs{
+      max-height: 340px;
+    }
     @include min-md {
+      height: 100%;
       border-left: 1px solid #000;
       margin-left: -1px;
     }
