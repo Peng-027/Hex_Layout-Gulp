@@ -1,9 +1,10 @@
 "use strict";
 
 $(function () {
-  $('.courseSlider-btn').on('click', function () {
+  $('.courseSlider-btn').on('click', function (e) {
     $('.courseSlider-btn').removeClass('info-primary');
     $(this).toggleClass('info-primary');
+    e.preventDefault();
   });
 }); //program
 
@@ -160,7 +161,7 @@ function check(error, item) {
       errorCheck = false;
       errorArr += 1;
     });
-  } //驗證數字
+  } //驗證數字格式
 
 
   var att = item.getAttribute('name');
@@ -199,15 +200,24 @@ credit_inputs.forEach(function (item) {
     var error = validate(credit_form, credit_constraints);
     check(error, item);
   });
-});
-document.querySelector('.check-btn').addEventListener('click', function (e) {
-  if (errorArr !== 0 || !errorCheck) {
-    e.preventDefault();
-    alert("請填寫完整表單");
-    return;
-  } else if (e.target.textContent === "登入") {
-    alert("登入成功");
-    return;
-  }
+}); // check-btn
+
+document.querySelectorAll('.check-btn').forEach(function (check_item) {
+  check_item.addEventListener('click', function (e) {
+    if (e.target.textContent === "登入") {
+      var userName = document.querySelector('input[name="userEmail"]');
+      var userPass = document.querySelector('input[name="userPass"]');
+
+      if (userName.value === "" || userPass.value === "" || errorArr !== 0) {
+        alert("請檢查登入資訊");
+        e.preventDefault();
+      } else {
+        alert("登入成功");
+      }
+    } else if (errorArr !== 0 || !errorCheck) {
+      e.preventDefault();
+      alert("請填寫完整資訊");
+    }
+  });
 });
 //# sourceMappingURL=all.js.map

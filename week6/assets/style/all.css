@@ -1177,11 +1177,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.register-form li:first-child a {
-  color: #62DB54;
-  border-color: #62DB54;
-}
-
 .register-form .form-select {
   height: 44px;
   -webkit-box-shadow: none;
