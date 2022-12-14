@@ -10,7 +10,7 @@
     }
   }
   h3{
-    @include title(32px, 46px);
+    @include title(30px, 44px);
     @include max-lg{
       @include title(24px, 35px);
     }
