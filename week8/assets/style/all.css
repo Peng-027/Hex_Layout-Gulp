@@ -214,7 +214,10 @@ a, a:hover {
 
 @media (min-width: 375px) {
   .recommend-img {
-    max-height: 340px;
+    max-height: 360px;
+  }
+  .recommend-img img {
+    max-height: 360px;
   }
 }
 
