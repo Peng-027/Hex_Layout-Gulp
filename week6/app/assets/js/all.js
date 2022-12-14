@@ -1,8 +1,10 @@
 $(function() {
 
-  $('.courseSlider-btn').on('click', function(){
+  $('.courseSlider-btn').on('click', function(e){
     $('.courseSlider-btn').removeClass('info-primary');
     $(this).toggleClass('info-primary');
+
+    e.preventDefault();
   })
 
 });
@@ -155,6 +157,7 @@ let errorCheck = true;
 // 確認驗證是否全部通過
 let errorArr = 0;
 
+
 function check(error, item) {
 
   item.previousElementSibling.children[0].textContent = "";
@@ -171,7 +174,7 @@ function check(error, item) {
     })
   }
 
-  //驗證數字
+  //驗證數字格式
   let att = item.getAttribute('name');
   if (att === "phone" || att === "creditUser" || att === "creditPass") {
     let num = Number(item.value);
@@ -222,13 +225,29 @@ credit_inputs.forEach((item) => {
 
 })
 
-document.querySelector('.check-btn').addEventListener('click', function (e) {
-  if (errorArr !== 0 || !errorCheck) {
-    e.preventDefault();
-    alert("請填寫完整表單");
-    return
-  }else if(e.target.textContent === "登入"){
-    alert("登入成功");
-    return
-  }
+
+// check-btn
+document.querySelectorAll('.check-btn').forEach((check_item) => {
+
+  check_item.addEventListener('click', function (e) {
+
+    if (e.target.textContent === "登入") {
+
+      let userName = document.querySelector('input[name="userEmail"]');
+      let userPass = document.querySelector('input[name="userPass"]');
+
+      if (userName.value === "" || userPass.value === "" || errorArr !== 0){
+        alert("請檢查登入資訊");
+        e.preventDefault();
+      }else{
+        alert("登入成功");
+      }
+
+    }else if (errorArr !== 0 || !errorCheck) {
+      e.preventDefault();
+      alert("請填寫完整資訊");
+    }
+  })
 })
+
+
