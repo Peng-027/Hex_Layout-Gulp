@@ -17,9 +17,9 @@
   }
   &-img{
     
-    @include min-xs{
-      min-height: 340px;
-    }
+    // @include min-xs{
+    //   min-height: 340px;
+    // }
     @include min-md {
       border-left: 1px solid #000;
       margin-left: -1px;
