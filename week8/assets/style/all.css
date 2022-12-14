@@ -199,8 +199,8 @@ a, a:hover {
 }
 
 .recommend h3 {
-  font-size: 32px;
-  line-height: 46px;
+  font-size: 30px;
+  line-height: 44px;
   font-weight: bold;
 }
 
@@ -670,6 +670,14 @@ a, a:hover {
     height: auto;
     padding: 16px 24px;
   }
+}
+
+.introduce-img {
+  max-height: 360px;
+}
+
+.introduce-img img {
+  max-height: 360px;
 }
 
 .introduce-toggle .nav-link.active {
